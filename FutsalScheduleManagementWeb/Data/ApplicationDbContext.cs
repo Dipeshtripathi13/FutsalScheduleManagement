@@ -5,9 +5,9 @@ namespace FutsalScheduleManagementWeb.Data
 {
     public class ApplicationDbContext: DbContext
     {
-        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
+        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> option) : base(option)
         {
         }
-        public DbSet<Schedule> Schedules { get; set; }
+        public DbSet<Schedule>Schedules { get; set; }
     }
 }

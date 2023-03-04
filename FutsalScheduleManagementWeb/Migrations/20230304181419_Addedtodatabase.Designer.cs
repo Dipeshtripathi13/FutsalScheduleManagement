@@ -11,8 +11,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace FutsalScheduleManagementWeb.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20230304175400_AddScheduletoDatabase")]
-    partial class AddScheduletoDatabase
+    [Migration("20230304181419_Addedtodatabase")]
+    partial class Addedtodatabase
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

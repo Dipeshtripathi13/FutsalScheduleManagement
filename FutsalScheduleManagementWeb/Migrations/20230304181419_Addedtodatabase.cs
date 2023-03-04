@@ -5,7 +5,7 @@
 namespace FutsalScheduleManagementWeb.Migrations
 {
     /// <inheritdoc />
-    public partial class AddScheduletoDatabase : Migration
+    public partial class Addedtodatabase : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
