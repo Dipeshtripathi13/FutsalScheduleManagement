@@ -1,7 +1,33 @@
-﻿
+﻿@*//first need to capture the model that is passed from the controller*@
+@model IEnumerable<Schedule>;
 @{
     ViewData["Title"] = "Index";
 }
 
 <h1>Index Schedule</h1>
+<table class="table table-bordered table-striped" style= "width:100%">
+    <thead>
+        <tr>
+            <th>
+                Id
+            </th>
+            <th>
+                Name
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var obj in Model)
+        {
+            <tr>
+                <td width="50%">
+                    @obj.Id
+                </td>
+                <td width="50%">
+                    @obj.Name
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
 

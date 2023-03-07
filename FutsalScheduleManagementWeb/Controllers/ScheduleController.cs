@@ -1,4 +1,5 @@
 ﻿using FutsalScheduleManagementWeb.Data;
+using FutsalScheduleManagementWeb.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace FutsalScheduleManagementWeb.Controllers
@@ -22,9 +23,9 @@ namespace FutsalScheduleManagementWeb.Controllers
             //then we can use this _db to retrive the schedule
             //for this
             //create a var
-            var objScheduleList = _db.Schedules.ToList();//no sql codding required
+            IEnumerable<Schedule> objScheduleList = _db.Schedules.ToList();//no sql codding required
 
-            return View();
+            return View(objScheduleList); //this need to capture in view
         }
     }
 }
