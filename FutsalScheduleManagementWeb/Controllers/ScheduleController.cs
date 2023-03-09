@@ -22,7 +22,7 @@ namespace FutsalScheduleManagementWeb.Controllers
         {
             //then we can use this _db to retrive the schedule
             //for this
-            //create a var
+            //we create a var
             IEnumerable<Schedule> objScheduleList = _db.Schedules.ToList();//no sql codding required
 
             return View(objScheduleList); //this need to capture in view
