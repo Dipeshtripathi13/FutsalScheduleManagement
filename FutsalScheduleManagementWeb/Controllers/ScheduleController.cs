@@ -1,6 +1,7 @@
 ﻿using FutsalScheduleManagementWeb.Data;
 using FutsalScheduleManagementWeb.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace FutsalScheduleManagementWeb.Controllers
 {
@@ -18,14 +19,19 @@ namespace FutsalScheduleManagementWeb.Controllers
             _db = db;  //populating the local db object(_db) whth this db
 
         }
-        public IActionResult Index()
-        {
-            //then we can use this _db to retrive the schedule
-            //for this
-            //we create a var
-            IEnumerable<Schedule> objScheduleList = _db.Schedules.ToList();//no sql codding required
+        //public IActionResult Index()
+        //{
+        //    //then we can use this _db to retrive the schedule
+        //    //for this
+        //    //we create a var
+        //    IEnumerable<Schedule> objScheduleList = _db.Schedules.ToList();//no sql codding required
 
-            return View(objScheduleList); //this need to capture in view
+        //    return View(objScheduleList); //this need to capture in view
+        //}
+        public IActionResult Calendar()
+        {
+            IEnumerable<Schedule> objScheduleList = _db.Schedules.ToList();
+            return View(objScheduleList);
         }
     }
 }
